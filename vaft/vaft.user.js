@@ -893,7 +893,7 @@
             playerState.setSrc({ isNewMediaPlayerInstance: true, refreshAccessToken: true });
             postTwitchWorkerMessage('TriggeredPlayerReload');
             player.play();
-            if (localStorageHookFailed && (currentQualityLS || currentMutedLS || currentVolumeLS)) {
+            if (currentQualityLS || currentMutedLS || currentVolumeLS) {
                 setTimeout(() => {
                     try {
                         if (currentQualityLS) {
